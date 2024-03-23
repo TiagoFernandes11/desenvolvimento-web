@@ -18,7 +18,6 @@ const pessoa = {
 console.log(pessoa.ola());
 
 //Class
-
 class Animal {
   constructor() {
     this.comer = () => console.log("Comendo");
