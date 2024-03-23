@@ -1,0 +1,11 @@
+{
+  "name": "section06",
+  "version": "1.0.0",
+  "description": "exercises for section06",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tiago Fernandes Ribeiro",
+  "license": "ISC"
+}
