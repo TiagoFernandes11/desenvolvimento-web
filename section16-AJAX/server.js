@@ -21,6 +21,13 @@ app.use(bodyParser.json());
 
 app.get("/teste", (req, res) => res.send("<h1>Ok</h1>"));
 
+app.get("/parOuImpar", (req, res) =>{
+  const par = parseInt(req.query.numero) % 2 === 0
+  res.send({
+    resultado: par ? "<h1>Par</h1>" : "<h1>Impar</h1>"
+  })
+})
+
 app.post("/upload", (req, res) => {
   upload(req, res, (err) => {
     if (err) {
