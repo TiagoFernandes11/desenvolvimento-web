@@ -26,15 +26,20 @@
         sucess(data) {
           exibirResultado("get", data);
         },
+        error(e) {
+          exibirResultado("get", e);
+        },
       });
 
       $.ajax({
         url: "formulario",
-        method: "POST",
+        method: "post",
         data: {
           nome: "Tiago",
           sobrenome: "Fernandes Ribeiro",
-          id: 1,
+        },
+        success(data) {
+          exibirResultado("post", data);
         },
       });
     </script>
