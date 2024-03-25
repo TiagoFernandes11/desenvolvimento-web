@@ -13,12 +13,19 @@
     <div>2</div>
 
     <script>
-      $("div").hide().fadeIn(10000);
+      $("div").hide().fadeIn(1000);
       $("div")
         .get()
         .forEach((div) => {
           div.innerHTML = "<h1>Yeshua é o Senhor</h1>";
         });
+
+      $.fn.fundoVerde = function () {
+        this.css("background-color", "green");
+        return this;
+      };
+
+      $("body").fundoVerde();
     </script>
   </body>
 </html>
