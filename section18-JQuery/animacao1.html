@@ -22,7 +22,14 @@
     <button>Iniciar</button>
     <div id='animar'>Animar!</div>
 
-    <script>        
-        // ...
+    <script>
+        
+        function animar(){
+            const tempo = 500;
+            $("#animar").fadeToggle(tempo)
+        }
+
+        $("button").click(animar)
+        
     </script>
 </body>
