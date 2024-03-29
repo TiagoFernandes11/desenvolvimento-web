@@ -8,6 +8,7 @@ import Multiplos from "./componentes/Multiplos";
 import Saudacao from "./componentes/SaudacaoClasse";
 
 import Pai from "./componentes/Pai";
+import Filho from "./componentes/Filho";
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -23,6 +24,8 @@ root.render(
     <Saudacao tipo="Bom dia" nome="Tiago" />
     <hr></hr>
     <p>Elementos pai e filho</p>
-    <Pai nome="Tiago" sobrenome="Fernandes Ribeiro"/>
+    <Pai nome="Tiago" sobrenome="Fernandes Ribeiro">
+        <Filho nome="Sara" sobrenome="Fernandes Ribeiro"/>
+    </Pai>
   </div>
 );

@@ -5,8 +5,10 @@ export default props => <div>
     <h1>{props.nome} {props.sobrenome}</h1>
     <h2>Filhos</h2>
     <ul>
-        <Filho nome="Sara" sobrenome={props.sobrenome}/>
+        {/* <Filho nome="Sara" sobrenome={props.sobrenome}/>
         <Filho {...props}/>
-        <Filho {...props} nome="João"/>
+        <Filho {...props} nome="João"/> */}
+        {props.children}
+        {React.cloneElement(props.children, { ...props , nome:"João"})}
     </ul>
 </div>
