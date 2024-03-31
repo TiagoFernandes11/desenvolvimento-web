@@ -11,13 +11,35 @@
       <saudacao nome="Tiago"></saudacao>
       <saudacao nome="Rita"></saudacao>
       <saudacao nome="Sara"></saudacao>
+      <contador></contador>
+      <contador></contador>
+      <contador></contador>
     </div>
     <script>
+      Vue.component("contador", {
+        data: function () {
+          return {
+            contador: 0,
+          };
+        },
+        methods: {
+          add() {
+            this.contador++;
+          },
+          decrease() {
+            this.contador--;
+          },
+        },
+        template: `
+          <div>
+            <span> {{contador}} </span>
+            <button @click="add">+1</button>
+            <button @click="decrease">-1</button>
+          </div>
+        `,
+      });
       Vue.component("saudacao", {
         props: ["nome"],
-        data: {
-          date: new Date().toLocaleString
-        },
         template: `
             <div>Bom dia {{nome}}!</div>
           `,
